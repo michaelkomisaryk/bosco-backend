@@ -1,7 +1,8 @@
 import random
 
+from django.contrib import messages
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 
 from .models import Product
 
@@ -50,6 +51,20 @@ countries = [
 def products_list(request):
     products = Product.objects.all()
     return render(request, 'products/products.html', {'products': products})
+
+
+def add_product(request):
+    if request.method == 'POST':
+        Product.objects.create(
+            name=request.POST.get('name'),
+            vehicle_brand=request.POST.get('vehicle_brand'),
+            part_number=request.POST.get('part_number'),
+            origin_country=request.POST.get('origin_country'),
+            price=request.POST.get('price'),
+        )
+        messages.success(request, 'Товар успішно додано')
+        return redirect('products_list')
+    return render(request, 'products/add_product.html')
 
 
 def replenish(request, count):

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Додати товар{% endblock %}
+
+{% block content %}
+<h1>Додати товар</h1>
+<form method="post">
+    {% csrf_token %}
+    <p>
+        <label>Назва</label><br>
+        <input type="text" name="name" required>
+    </p>
+    <p>
+        <label>Марка авто</label><br>
+        <input type="text" name="vehicle_brand" required>
+    </p>
+    <p>
+        <label>Артикул</label><br>
+        <input type="text" name="part_number" required>
+    </p>
+    <p>
+        <label>Країна походження</label><br>
+        <input type="text" name="origin_country" required>
+    </p>
+    <p>
+        <label>Ціна</label><br>
+        <input type="number" name="price" step="0.01" min="0" required>
+    </p>
+    <button type="submit">Зберегти</button>
+</form>
+{% endblock %}

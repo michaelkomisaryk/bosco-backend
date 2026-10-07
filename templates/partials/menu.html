@@ -2,6 +2,8 @@
 <nav>
     <a href="{% url 'products_list' %}">Товари</a>
     |
+    <a href="{% url 'add_product' %}">Додати товар</a>
+    |
     <a href="{% url 'replenish' 5 %}">Додати 5 товарів</a>
     |
     Товарів у базі: {% product_count %}
