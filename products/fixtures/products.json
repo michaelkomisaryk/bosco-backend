@@ -1,0 +1,112 @@
+[
+  {
+    "model": "products.product",
+    "pk": 1,
+    "fields": {
+      "name": "Фільтр масла",
+      "vehicle_brand": "Toyota",
+      "part_number": "90915-YZZD4",
+      "origin_country": "Японія",
+      "price": "320.00"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 2,
+    "fields": {
+      "name": "Гальмівні колодки",
+      "vehicle_brand": "Volkswagen",
+      "part_number": "1K0698451G",
+      "origin_country": "Німеччина",
+      "price": "1450.00"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 3,
+    "fields": {
+      "name": "Свічки запалювання",
+      "vehicle_brand": "BMW",
+      "part_number": "12120037607",
+      "origin_country": "Німеччина",
+      "price": "890.00"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 4,
+    "fields": {
+      "name": "Амортизатор",
+      "vehicle_brand": "Ford",
+      "part_number": "1871087",
+      "origin_country": "США",
+      "price": "2680.00"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 5,
+    "fields": {
+      "name": "Повітряний фільтр",
+      "vehicle_brand": "Hyundai",
+      "part_number": "28113-2B000",
+      "origin_country": "Південна Корея",
+      "price": "410.00"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 6,
+    "fields": {
+      "name": "Ремень ГРМ",
+      "vehicle_brand": "Renault",
+      "part_number": "7701477026",
+      "origin_country": "Франція",
+      "price": "1750.00"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 7,
+    "fields": {
+      "name": "Радіатор охолодження",
+      "vehicle_brand": "Skoda",
+      "part_number": "5Q0121251H",
+      "origin_country": "Чехія",
+      "price": "3920.00"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 8,
+    "fields": {
+      "name": "Генератор",
+      "vehicle_brand": "Mercedes-Benz",
+      "part_number": "A0001541502",
+      "origin_country": "Німеччина",
+      "price": "8450.00"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 9,
+    "fields": {
+      "name": "Стартер",
+      "vehicle_brand": "Nissan",
+      "part_number": "23300-EN20A",
+      "origin_country": "Японія",
+      "price": "5120.00"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 10,
+    "fields": {
+      "name": "Підшипник маточини",
+      "vehicle_brand": "Mazda",
+      "part_number": "G26A-33-047",
+      "origin_country": "Японія",
+      "price": "1980.00"
+    }
+  }
+]
