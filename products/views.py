@@ -1,7 +1,6 @@
 import random
 
 from django.contrib import messages
-from django.http import HttpResponse
 from django.shortcuts import redirect, render
 
 from .models import Product
@@ -76,4 +75,5 @@ def replenish(request, count):
             origin_country=random.choice(countries),
             price=random.randint(200, 8000),
         )
-    return HttpResponse(f"Додано {count} нових записів")
+    messages.success(request, f'Додано {count} нових записів')
+    return redirect('products_list')
