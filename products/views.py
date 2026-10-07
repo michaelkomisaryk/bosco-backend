@@ -1,6 +1,7 @@
 import random
 
 from django.http import HttpResponse
+from django.shortcuts import render
 
 from .models import Product
 
@@ -48,39 +49,7 @@ countries = [
 
 def products_list(request):
     products = Product.objects.all()
-    html = """
-    <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Автозапчастини</title>
-    </head>
-    <body>
-        <h1>Список автозапчастин</h1>
-        <table border="1" cellpadding="5">
-            <tr>
-                <th>Назва</th>
-                <th>Марка авто</th>
-                <th>Артикул</th>
-                <th>Країна походження</th>
-                <th>Ціна</th>
-            </tr>
-    """
-    for p in products:
-        html += f"""
-            <tr>
-                <td>{p.name}</td>
-                <td>{p.vehicle_brand}</td>
-                <td>{p.part_number}</td>
-                <td>{p.origin_country}</td>
-                <td>{p.price}</td>
-            </tr>
-        """
-    html += """
-        </table>
-    </body>
-    </html>
-    """
-    return HttpResponse(html)
+    return render(request, 'products/product_list.html', {'products': products})
 
 
 def replenish(request, count):
