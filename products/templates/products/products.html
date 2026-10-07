@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load products_extras %}
 
 {% block title %}Автозапчастини{% endblock %}
 
@@ -20,7 +21,7 @@
         <td>{{ p.vehicle_brand }}</td>
         <td>{{ p.part_number }}</td>
         <td>{{ p.origin_country }}</td>
-        <td>{{ p.price }}</td>
+            <td>{{ p.price|uah }}</td>
     </tr>
     {% empty %}
     <tr>
